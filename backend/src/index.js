@@ -21,4 +21,9 @@ app.use('/api/admin',   adminRoutes);
 
 app.get('/health', (_req, res) => res.json({ status: 'ok', ts: new Date().toISOString() }));
 
-app.listen(PORT, () => console.log(`Villedas Delight API running on port ${PORT}`));
+// Local / Render: start HTTP server. Vercel: export app as handler.
+if (process.env.VERCEL) {
+  module.exports = app;
+} else {
+  app.listen(PORT, () => console.log(`Villedas Delight API running on port ${PORT}`));
+}
