@@ -1,0 +1,11 @@
+{
+  "name": "villedas-delight-qr",
+  "version": "1.0.0",
+  "description": "Generates QR code for the campaign landing page",
+  "scripts": {
+    "generate": "node generate-qr.js"
+  },
+  "dependencies": {
+    "qrcode": "^1.5.3"
+  }
+}
