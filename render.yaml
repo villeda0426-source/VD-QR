@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: vd-qr-backend
+    runtime: node
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: SUPABASE_URL
+        value: https://quigyocpuvakpiterawl.supabase.co
+      - key: SUPABASE_SERVICE_KEY
+        value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InF1aWd5b2NwdXZha3BpdGVyYXdsIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc4MDY5ODk4NywiZXhwIjoyMDk2Mjc0OTg3fQ.u7-9STmqQVS9KK-yVFr0aophIpUdUny3k3KRN9i4kFE
+      - key: ADMIN_API_KEY
+        value: c2f1c92a4ea50009e9bfd3127bf4ce0663c0ad0b330c491a
+      - key: FRONTEND_URL
+        value: https://vd-qr.vercel.app
